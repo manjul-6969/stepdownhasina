@@ -1,10 +1,11 @@
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import { GoogleOAuthProvider } from "@react-oauth/google";
-
+import { GoogleAnalytics } from "@next/third-parties/google";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import "../styles/globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [isSSR, setIsSSR] = useState(true);
@@ -26,6 +27,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
             <Sidebar />
           </div>
           <div className="mt-4 flex flex-col gap-10 overflow-auto h-[88vh] videos flex-1">
+            <Analytics />
+            <GoogleAnalytics gaId="G-WEH8067BWV" />
+            <GoogleAnalytics gaId="G-82GB1617RE" />
             <Component {...pageProps} />
           </div>
         </div>

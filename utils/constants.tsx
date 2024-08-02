@@ -4,7 +4,7 @@ import { FaPaw, FaMedal, FaGamepad } from "react-icons/fa";
 
 export const topics = [
   {
-    name: "15 July Crime Evidances",
+    name: "Quota Protest",
     icon: <BsCode />,
   },
   // {

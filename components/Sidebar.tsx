@@ -25,7 +25,7 @@ const Sidebar: NextPage = () => {
   const { fetchAllUsers, allUsers }: any = useAuthStore();
 
   const activeLink =
-    "flex items-center gap-3 hover:bg-gray-200 dark:hover:bg-gray-200 p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#F51997] rounded";
+    "flex items-center gap-3 hover:bg-gray-200 dark:hover:bg-gray-200 p-3 justify-center xl:justify-start cursor-pointer font-semibold text-red-500 rounded";
 
   const normalLink =
     "flex items-center gap-3 hover:bg-gray-200 dark:hover:bg-gray-200 p-3 justify-center xl:justify-start cursor-pointer font-semibold rounded";
@@ -51,17 +51,17 @@ const Sidebar: NextPage = () => {
                 </span>
               </div>
             </Link>
-            <Link href="/">
-              <div className={pathname === "/" ? activeLink : normalLink}>
+            <Link href="https://discord.gg/bangladesh">
+              <div className={pathname === "/help" ? activeLink : normalLink}>
                 <p className="text-2xl">
                   <AiOutlineHeart />
                 </p>
                 <span className="capitalize text-xl hidden xl:block">
-                  Seek Help
+                  Discord
                 </span>
               </div>
             </Link>
-            <Link href="/">
+            {/* <Link href="/">
               <div className={pathname === "/" ? activeLink : normalLink}>
                 <p className="text-2xl">
                   <AiOutlineMessage />
@@ -78,7 +78,7 @@ const Sidebar: NextPage = () => {
                 </p>
                 <span className="capitalize text-xl hidden xl:block">AD</span>
               </div>
-            </Link>
+            </Link> */}
           </div>
 
           <Discover />
